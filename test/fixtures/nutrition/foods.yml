@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  food_group_id: 
+  description: MyText
+  summary: MyString
+  aliases: MyText
+  manufacturer: MyString
+  is_complete: false
+  waste_description: MyString
+  waste_yield: 1
+  origin: MyString
+  nitrogen_protein_yield: 9.99
+  protein_calorie_yield: 9.99
+  fat_calorie_yield: 9.99
+  carb_calorie_yield: 9.99
+
+two:
+  food_group_id: 
+  description: MyText
+  summary: MyString
+  aliases: MyText
+  manufacturer: MyString
+  is_complete: false
+  waste_description: MyString
+  waste_yield: 1
+  origin: MyString
+  nitrogen_protein_yield: 9.99
+  protein_calorie_yield: 9.99
+  fat_calorie_yield: 9.99
+  carb_calorie_yield: 9.99

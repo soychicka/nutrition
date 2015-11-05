@@ -1,0 +1,69 @@
+<%= form_for(@food) do |f| %>
+  <% if @food.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@food.errors.count, "error") %> prohibited this food from being saved:</h2>
+
+      <ul>
+      <% @food.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :food_group_id %><br>
+    <%= f.text_field :food_group_id %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br>
+    <%= f.text_field :summary %>
+  </div>
+  <div class="field">
+    <%= f.label :aliases %><br>
+    <%= f.text_area :aliases %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer %><br>
+    <%= f.text_field :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.label :is_complete %><br>
+    <%= f.check_box :is_complete %>
+  </div>
+  <div class="field">
+    <%= f.label :waste_description %><br>
+    <%= f.text_field :waste_description %>
+  </div>
+  <div class="field">
+    <%= f.label :waste_yield %><br>
+    <%= f.number_field :waste_yield %>
+  </div>
+  <div class="field">
+    <%= f.label :origin %><br>
+    <%= f.text_field :origin %>
+  </div>
+  <div class="field">
+    <%= f.label :nitrogen_protein_yield %><br>
+    <%= f.text_field :nitrogen_protein_yield %>
+  </div>
+  <div class="field">
+    <%= f.label :protein_calorie_yield %><br>
+    <%= f.text_field :protein_calorie_yield %>
+  </div>
+  <div class="field">
+    <%= f.label :fat_calorie_yield %><br>
+    <%= f.text_field :fat_calorie_yield %>
+  </div>
+  <div class="field">
+    <%= f.label :carb_calorie_yield %><br>
+    <%= f.text_field :carb_calorie_yield %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

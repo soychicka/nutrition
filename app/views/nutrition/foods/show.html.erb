@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Food group:</strong>
+  <%= @food.food_group %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @food.description %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @food.summary %>
+</p>
+
+<p>
+  <strong>Aliases:</strong>
+  <%= @food.aliases %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @food.manufacturer %>
+</p>
+
+<p>
+  <strong>Is complete:</strong>
+  <%= @food.is_complete %>
+</p>
+
+<p>
+  <strong>Waste description:</strong>
+  <%= @food.waste_description %>
+</p>
+
+<p>
+  <strong>Waste yield:</strong>
+  <%= @food.waste_yield %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @food.origin %>
+</p>
+
+<p>
+  <strong>Nitrogen protein yield:</strong>
+  <%= @food.nitrogen_protein_yield %>
+</p>
+
+<p>
+  <strong>Protein calorie yield:</strong>
+  <%= @food.protein_calorie_yield %>
+</p>
+
+<p>
+  <strong>Fat calorie yield:</strong>
+  <%= @food.fat_calorie_yield %>
+</p>
+
+<p>
+  <strong>Carb calorie yield:</strong>
+  <%= @food.carb_calorie_yield %>
+</p>
+
+<%= link_to 'Edit', edit_food_path(@food) %> |
+<%= link_to 'Back', foods_path %>
