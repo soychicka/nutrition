@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unit: MyString
+  label: MyString
+  name: MyText
+  significant_figures: 1
+  position: 1
+
+two:
+  unit: MyString
+  label: MyString
+  name: MyText
+  significant_figures: 1
+  position: 1
