@@ -5,5 +5,7 @@ module Nutrition
     # test "the truth" do
     #   assert true
     # end
+    
+    Nutrition::Engine.load_seed
   end
 end

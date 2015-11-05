@@ -10,10 +10,10 @@ class CreateNutritionFoods < ActiveRecord::Migration
       t.string :waste_description
       t.integer :waste_yield
       t.string :origin
-      t.decimal :nitrogen_protein_yield
-      t.decimal :protein_calorie_yield
-      t.decimal :fat_calorie_yield
-      t.decimal :carb_calorie_yield
+      t.decimal :nitrogen_protein_yield, :default => 0, :precision => 4, :scale => 2
+      t.decimal :protein_calorie_yield, :default => 0, :precision => 4, :scale => 2
+      t.decimal :fat_calorie_yield, :default => 0, :precision => 4, :scale => 2
+      t.decimal :carb_calorie_yield, :default => 0, :precision => 4, :scale => 2
 
       t.timestamps null: false
     end

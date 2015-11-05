@@ -13,11 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20151105190151) do
 
-  create_table "foods_langual_factors", id: false, force: :cascade do |t|
-    t.integer "food_id",           null: false
-    t.integer "langual_factor_id", null: false
-  end
-
   create_table "nutrition_food_groups", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -34,18 +29,24 @@ ActiveRecord::Schema.define(version: 20151105190151) do
     t.string   "waste_description"
     t.integer  "waste_yield"
     t.string   "origin"
-    t.decimal  "nitrogen_protein_yield"
-    t.decimal  "protein_calorie_yield"
-    t.decimal  "fat_calorie_yield"
-    t.decimal  "carb_calorie_yield"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.decimal  "nitrogen_protein_yield", precision: 4, scale: 2, default: 0.0
+    t.decimal  "protein_calorie_yield",  precision: 4, scale: 2, default: 0.0
+    t.decimal  "fat_calorie_yield",      precision: 4, scale: 2, default: 0.0
+    t.decimal  "carb_calorie_yield",     precision: 4, scale: 2, default: 0.0
+    t.datetime "created_at",                                                   null: false
+    t.datetime "updated_at",                                                   null: false
   end
 
   add_index "nutrition_foods", ["food_group_id"], name: "index_nutrition_foods_on_food_group_id"
 
+  create_table "nutrition_foods_langual_factors", id: false, force: :cascade do |t|
+    t.integer "food_id",           null: false
+    t.integer "langual_factor_id", null: false
+  end
+
   create_table "nutrition_langual_factors", force: :cascade do |t|
     t.text     "description"
+    t.string   "legacy_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -53,13 +54,13 @@ ActiveRecord::Schema.define(version: 20151105190151) do
   create_table "nutrition_masses", force: :cascade do |t|
     t.integer  "food_id"
     t.integer  "seq"
-    t.decimal  "quantity"
+    t.decimal  "quantity",           precision: 5, scale: 3, default: 0.0
     t.string   "unit"
-    t.decimal  "mass"
+    t.decimal  "mass",               precision: 7, scale: 1, default: 0.0
     t.integer  "datapoints"
-    t.decimal  "standard_deviation"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.decimal  "standard_deviation", precision: 7, scale: 3, default: 0.0
+    t.datetime "created_at",                                               null: false
+    t.datetime "updated_at",                                               null: false
   end
 
   add_index "nutrition_masses", ["food_id"], name: "index_nutrition_masses_on_food_id"
