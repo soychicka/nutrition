@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Nutrition::VERSION
   s.authors     = ["soychicka"]
   s.email       = ["soychicka@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Nutrition."
-  s.description = "TODO: Description of Nutrition."
+  s.homepage    = "nope."
+  s.summary     = "rails engine to allow easy integration of USDA Nutrition data into rails app."
+  s.description = "National Nutrient Database for Standard Reference Release 28.  Refer to enclosed pdf for data licensing info."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

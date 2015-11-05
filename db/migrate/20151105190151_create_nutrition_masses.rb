@@ -1,7 +1,7 @@
 class CreateNutritionMasses < ActiveRecord::Migration
   def change
     create_table :nutrition_masses do |t|
-      t.references :food, index: true, foreign_key: true
+      t.references :nutrition_food, index: true, foreign_key: true
       t.integer :seq
       t.decimal :quantity, :default => 0, :precision => 5, :scale => 3
       t.string :unit

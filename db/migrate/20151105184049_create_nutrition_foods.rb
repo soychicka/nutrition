@@ -1,7 +1,7 @@
 class CreateNutritionFoods < ActiveRecord::Migration
   def change
     create_table :nutrition_foods do |t|
-      t.references :food_group, index: true, foreign_key: true
+      t.references :nutrition_food_group, index: true, foreign_key: true
       t.text :description
       t.string :summary
       t.text :aliases
