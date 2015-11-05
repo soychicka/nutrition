@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Masses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Seq</th>
+      <th>Quantity</th>
+      <th>Unit</th>
+      <th>Mass</th>
+      <th>Datapoints</th>
+      <th>Standard deviation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @masses.each do |mass| %>
+      <tr>
+        <td><%= mass.food %></td>
+        <td><%= mass.seq %></td>
+        <td><%= mass.quantity %></td>
+        <td><%= mass.unit %></td>
+        <td><%= mass.mass %></td>
+        <td><%= mass.datapoints %></td>
+        <td><%= mass.standard_deviation %></td>
+        <td><%= link_to 'Show', mass %></td>
+        <td><%= link_to 'Edit', edit_mass_path(mass) %></td>
+        <td><%= link_to 'Destroy', mass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mass', new_mass_path %>

@@ -1,0 +1,45 @@
+<%= form_for(@mass) do |f| %>
+  <% if @mass.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mass.errors.count, "error") %> prohibited this mass from being saved:</h2>
+
+      <ul>
+      <% @mass.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :food_id %><br>
+    <%= f.text_field :food_id %>
+  </div>
+  <div class="field">
+    <%= f.label :seq %><br>
+    <%= f.number_field :seq %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :unit %><br>
+    <%= f.text_field :unit %>
+  </div>
+  <div class="field">
+    <%= f.label :mass %><br>
+    <%= f.text_field :mass %>
+  </div>
+  <div class="field">
+    <%= f.label :datapoints %><br>
+    <%= f.number_field :datapoints %>
+  </div>
+  <div class="field">
+    <%= f.label :standard_deviation %><br>
+    <%= f.text_field :standard_deviation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Food:</strong>
+  <%= @nutrient_value.food %>
+</p>
+
+<p>
+  <strong>Nutrient:</strong>
+  <%= @nutrient_value.nutrient %>
+</p>
+
+<p>
+  <strong>Yield:</strong>
+  <%= @nutrient_value.yield %>
+</p>
+
+<p>
+  <strong>Is fortified:</strong>
+  <%= @nutrient_value.is_fortified %>
+</p>
+
+<p>
+  <strong>Estimated from:</strong>
+  <%= @nutrient_value.estimated_from %>
+</p>
+
+<p>
+  <strong>Last update:</strong>
+  <%= @nutrient_value.last_update %>
+</p>
+
+<%= link_to 'Edit', edit_nutrient_value_path(@nutrient_value) %> |
+<%= link_to 'Back', nutrient_values_path %>

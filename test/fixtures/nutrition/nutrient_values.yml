@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  food_id: 
+  nutrient_id: 
+  yield: 9.99
+  is_fortified: false
+  estimated_from: 1
+  last_update: 2015-11-05 12:54:00
+
+two:
+  food_id: 
+  nutrient_id: 
+  yield: 9.99
+  is_fortified: false
+  estimated_from: 1
+  last_update: 2015-11-05 12:54:00

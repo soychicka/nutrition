@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105184049) do
+ActiveRecord::Schema.define(version: 20151105190151) do
+
+  create_table "foods_langual_factors", id: false, force: :cascade do |t|
+    t.integer "food_id",           null: false
+    t.integer "langual_factor_id", null: false
+  end
 
   create_table "nutrition_food_groups", force: :cascade do |t|
     t.string   "name"
@@ -44,6 +49,34 @@ ActiveRecord::Schema.define(version: 20151105184049) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "nutrition_masses", force: :cascade do |t|
+    t.integer  "food_id"
+    t.integer  "seq"
+    t.decimal  "quantity"
+    t.string   "unit"
+    t.decimal  "mass"
+    t.integer  "datapoints"
+    t.decimal  "standard_deviation"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "nutrition_masses", ["food_id"], name: "index_nutrition_masses_on_food_id"
+
+  create_table "nutrition_nutrient_values", force: :cascade do |t|
+    t.integer  "food_id"
+    t.integer  "nutrient_id"
+    t.decimal  "yield"
+    t.boolean  "is_fortified"
+    t.integer  "estimated_from"
+    t.datetime "last_update"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "nutrition_nutrient_values", ["food_id"], name: "index_nutrition_nutrient_values_on_food_id"
+  add_index "nutrition_nutrient_values", ["nutrient_id"], name: "index_nutrition_nutrient_values_on_nutrient_id"
 
   create_table "nutrition_nutrients", force: :cascade do |t|
     t.string   "unit"

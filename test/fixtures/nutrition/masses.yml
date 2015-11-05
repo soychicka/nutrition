@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  food_id: 
+  seq: 1
+  quantity: 9.99
+  unit: MyString
+  mass: 9.99
+  datapoints: 1
+  standard_deviation: 9.99
+
+two:
+  food_id: 
+  seq: 1
+  quantity: 9.99
+  unit: MyString
+  mass: 9.99
+  datapoints: 1
+  standard_deviation: 9.99
