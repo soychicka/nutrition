@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Langual Factors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @langual_factors.each do |langual_factor| %>
+      <tr>
+        <td><%= langual_factor.description %></td>
+        <td><%= link_to 'Show', langual_factor %></td>
+        <td><%= link_to 'Edit', edit_langual_factor_path(langual_factor) %></td>
+        <td><%= link_to 'Destroy', langual_factor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Langual factor', new_langual_factor_path %>
