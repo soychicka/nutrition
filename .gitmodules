@@ -1,0 +1,3 @@
+[submodule "vendor/nutrition"]
+	path = vendor/nutrition
+	url = https://github.com/soychicka/nutrition.git
