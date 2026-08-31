@@ -1,6 +1,13 @@
 module Nutrition
   class Food < ActiveRecord::Base
-    belongs_to :food_group
+    # create_nutrition_foods makes nutrition_food_group_id, so the
+    # food_group_id this would otherwise infer has never existed. has_many
+    # :masses below already names the prefixed key; the belongs_to was missed.
+    #
+    # Optional because a large share of the USDA import carries no food group
+    # at all -- two thirds of it in the data this was measured against -- and
+    # requiring it would make those rows unsaveable.
+    belongs_to :food_group, foreign_key: :nutrition_food_group_id, optional: true
     has_many :masses, :foreign_key => :nutrition_food_id
     has_and_belongs_to_many :langual_factors
     
